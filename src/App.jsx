@@ -11,7 +11,8 @@ function App() {
   };
 
   function timeLeft() {
-    const happyBirthdayDate = new Date("July 8, 2024 00:00:00").getTime();
+    const currentYear = new Date().getFullYear();
+    const happyBirthdayDate = new Date(`${currentYear}-07-08 00:00:00`).getTime();
     const nowDate = new Date().getTime();
     const remainingTime = happyBirthdayDate - nowDate;
     return remainingTime;
